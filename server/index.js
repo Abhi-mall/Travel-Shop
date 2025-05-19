@@ -10,7 +10,7 @@ import userRouter from './routes/user.route.js'
 
 const app = express()
 
-// const allowedOrigins = process.env.FRONTEND_URL.split(',')  || [];
+const allowedOrigins = process.env.FRONTEND_URL.split(',')  || [];
 
 // app.use(cors({
 //   credentials: true,
@@ -23,20 +23,23 @@ const app = express()
 //   }
 // }));
 
-const allowedOrigins = process.env.FRONTEND_URL.split(',');
+// const allowedOrigins = process.env.FRONTEND_URL.split(',');
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS: ' + origin));
+//     }
+//   },
+//   credentials: true
+// }));
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS: ' + origin));
-    }
-  },
+   origin: allowedOrigins,
   credentials: true
 }));
-
-
 
 app.use(express.json())
 app.use(cookieParser())

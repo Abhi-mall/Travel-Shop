@@ -143,7 +143,7 @@ export async function logoutController(request, response) {
     const cookieOption = {
       httpOnly : true,
       secure : true,
-      sameSite : true
+      sameSite : "None"
     }
 
    

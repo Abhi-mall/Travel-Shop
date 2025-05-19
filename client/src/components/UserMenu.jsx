@@ -24,6 +24,7 @@ const UserMenu = ({ close }) => {
     try {
       const response = await Axios({
         ...SummaryApi.logout,
+        withCredentials: true,
       });
       if (response.data.success) {
         if (close) {

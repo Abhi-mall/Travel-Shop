@@ -144,8 +144,7 @@ export async function logoutController(request, response) {
   httpOnly: true,
   secure: true,
   sameSite: "None",
-  path: "/",           // ensure cookie is set for whole site
-  expires: new Date(0) // set expiry to past date to clear cookie
+  
 };
 
    

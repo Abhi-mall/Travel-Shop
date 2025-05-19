@@ -92,12 +92,15 @@ const Header = () => {
                     )}
                   </div>
                 ) : (
-                  <button
-                    onClick={redirectToLoginPage}
-                    className="font-bold hover:text-pink-600 px-2"
-                  >
-                    Login
-                  </button>
+                  ""
+                  //   (
+                  //   <button
+                  //     onClick={redirectToLoginPage}
+                  //     className="font-bold hover:text-pink-600 px-2"
+                  //   >
+                  //     Login
+                  //   </button>
+                  // )
                 )}
               </div>
 
@@ -121,12 +124,6 @@ const Header = () => {
           <a href="#" className="text-gray-700 font-bold hover:text-pink-600">
             Contact
           </a>
-          <button
-            href="#"
-            className="text-gray-700 font-bold hover:text-pink-600"
-          >
-            Logout
-          </button>
         </div>
       )}
       {login && (

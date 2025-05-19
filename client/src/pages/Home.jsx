@@ -12,9 +12,9 @@ import RegistrationModal from "../components/Registration.jsx";
 const HomePage = () => {
   const [modalType, setModalType] = useState("landing");
 
-  // const openLogin = () => setModalType("login");
-  // const openRegister = () => setModalType("register");
-  // const closeModals = () => setModalType(null);
+  const openLogin = () => setModalType("login");
+  const openRegister = () => setModalType("register");
+  const closeModals = () => setModalType(null);
   return (
     <section>
       <div className="relative w-full h-[78vh] overflow-hidden">

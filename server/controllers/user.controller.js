@@ -108,7 +108,7 @@ export async function loginController(request, response) {
     const cookieOption = {
       httpOnly : true,
       secure : true,
-      sameSite : true
+      sameSite : "None"
     }
 
     response.cookie('accessToken', accessToken, cookieOption)
@@ -324,7 +324,7 @@ export async function resetPassword(request, response) {
 //get login user details
 export async function userDetails(request,response){
   try {
-      const userId  = request.userId
+      const userId  = request?.userId
 
      // console.log(userId)
 

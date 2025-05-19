@@ -10,48 +10,11 @@ import userRouter from './routes/user.route.js'
 
 const app = express()
 
-// const allowedOrigins = process.env.FRONTEND_URL.split(',')  || [];
+ const allowedOrigins = process.env.FRONTEND_URL.split(',')  || [];
 
-// app.use(cors({
-//   credentials: true,
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS: ' + origin));
-//     }
-//   }
-// }));
-
-// const allowedOrigins = process.env.FRONTEND_URL.split(',');
-
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS: ' + origin));
-//     }
-//   },
-//   credentials: true
-// }));
-
-// app.options('*', cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS: ' + origin));
-//     }
-//   },
-//   credentials: true
-// }));
-// //  app.options('*', cors());
-// // app.use(express.urlencoded({extended:true}));
-// // app.use(cors());
 
 app.use(cors({
-  origin: ['https://travel-shop-wd5z.vercel.app'],
+  origin: allowedOrigins,
   credentials: true
 }))
 app.use(express.json())

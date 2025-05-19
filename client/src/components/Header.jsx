@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X, Search, User } from "lucide-react";
-import MobileLogo from "../assets/MobileLogo.png";
+
 import SearchComponent from "./Search"; // Renamed for clarity
 import { useSelector } from "react-redux";
 import Login from "./Login";

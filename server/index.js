@@ -38,6 +38,7 @@ const allowedOrigins = process.env.FRONTEND_URL.split(',')  || [];
 
 app.use(cors({
    origin: allowedOrigins,
+   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 

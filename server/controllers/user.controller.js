@@ -140,11 +140,13 @@ export async function logoutController(request, response) {
     
     const userid = request.userId
 
-    const cookieOption = {
-      httpOnly : true,
-      secure : true,
-      sameSite : "None"
-    }
+   const cookieOption = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None",
+  path: "/",           // ensure cookie is set for whole site
+  expires: new Date(0) // set expiry to past date to clear cookie
+};
 
    
     response.clearCookie('accessToken', cookieOption )

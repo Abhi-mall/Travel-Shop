@@ -37,5 +37,5 @@ A full-stack travel e-commerce platform built using the **MERN** stack. Users ca
 
 ```bash
 git clone https://github.com/Abhi-mall/Travel-Shop.git
-cd Travel-Shop
+cd Travel
 

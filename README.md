@@ -39,3 +39,16 @@ A full-stack travel e-commerce platform built using the **MERN** stack. Users ca
 git clone https://github.com/Abhi-mall/Travel-Shop.git
 cd Travel
 
+📦 Step 2: Install Dependencies
+Backend:
+cd backend
+npm install
+
+Frontend:
+cd ../frontend
+npm install
+
+
+🔑 Step 3: Configure Environment Variables
+
+Step 4: Run the App Locally

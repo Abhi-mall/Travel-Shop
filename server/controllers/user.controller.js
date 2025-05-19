@@ -105,10 +105,12 @@ export async function loginController(request, response) {
       last_login_date : new Date()
     })
 
+   
+
     const cookieOption = {
       httpOnly : true,
-      secure : true,
-      sameSite : "None"
+       secure: true,
+       sameSite:  'None'
     }
 
     response.cookie('accessToken', accessToken, cookieOption)

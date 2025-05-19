@@ -24,14 +24,14 @@ const UserMenu = ({ close }) => {
     try {
       const response = await Axios({
         ...SummaryApi.logout,
-        withCredentials: true,
+        withCredentials: true, // important to send cookies!
       });
       if (response.data.success) {
         if (close) {
           close();
         }
         dispatch(logout());
-        localStorage.clear();
+        localStorage.clear(); // or selectively clear
         toast.success(response.data.message);
         navigate("/");
       }
@@ -39,7 +39,6 @@ const UserMenu = ({ close }) => {
       AxiosToastError(error);
     }
   };
-
   return (
     <div className="  ">
       <div className="font-semibold">My Account</div>

@@ -23,3 +23,7 @@ Axios.interceptors.request.use(
 )
 
 export default Axios
+
+// axios.get(`${import.meta.env.VITE_API_BASE_URL}/user/user-details`, {
+//   withCredentials: true
+// })

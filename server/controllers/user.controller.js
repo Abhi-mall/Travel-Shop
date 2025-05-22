@@ -148,7 +148,7 @@ export async function logoutController(request, response) {
 };
 
    
-    response.cookie("accessToken", "", cookieOption);
+   response.clearCookie('accessToken', cookieOption )
 
 
 
